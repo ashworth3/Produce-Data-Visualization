@@ -1,6 +1,6 @@
-# Produce Bar Chart Visualization with [D3.js](https://d3js.org/)
+# Produce Bar Chart Visualization with D3.js
 
-A simple and interactive data visualization project built with **D3.js**. This bar chart displays fruit and vegetable data from a CSV file, grouped by category and color-coded for clarity.
+A simple and interactive data visualization project built with **[D3.js](https://d3js.org/)** This bar chart displays fruit and vegetable data from a CSV file, grouped by category and color-coded for clarity.
 
 ---
 
