@@ -6,7 +6,9 @@ The chart shows examples of fruits and vegetables, grouped by category and color
 ---
 
 ## Chart Visualization
-<img width="728" alt="Screenshot 2025-04-27 at 11 42 42 PM" src="https://github.com/user-attachments/assets/233fadc7-dd22-4590-ba59-a308583728a3" />
+<img width="728" alt="Screenshot 2025-04-27 at 11 42 42 PM" src="https://github.com/user-attachments/assets/80ba568f-8165-4af4-9de1-7b52013cbbef" />
+
+---
 
 ## Dataset
 
