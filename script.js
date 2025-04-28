@@ -1,10 +1,10 @@
-// TODO: Load CSV file using d3.csv
+// Load CSV file using d3.csv
 d3.csv("data.csv").then(data => {
     data.forEach(d => {
         d.value = +d.value;
     });
 
-    // TODO: Create SVG group and define margin convention
+    // Create SVG group and define margin convention
     const svg = d3.select("#chart");
     const margin = { top: 50, right: 150, bottom: 150, left: 50 };
     const width = +svg.attr("width") - margin.left - margin.right;
@@ -13,7 +13,7 @@ d3.csv("data.csv").then(data => {
     const chart = svg.append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // TODO: Set up x and y scales
+    // Set up x and y scales
     const x = d3.scaleBand()
         .domain(data.map(d => d.name))
         .range([0, width])
@@ -24,7 +24,7 @@ d3.csv("data.csv").then(data => {
         .nice()
         .range([height, 0]);
 
-    // TODO: Add axes using d3.axisBottom and d3.axisLeft
+    // Add axes using d3.axisBottom and d3.axisLeft
     const colorScale = d3.scaleOrdinal()
         .domain(["Fruit", "Vegetable"])
         .range(["#0077b6", "#2a9d8f"]); // Blue for Fruit, Green for Vegetable
@@ -45,7 +45,7 @@ d3.csv("data.csv").then(data => {
         .attr("class", "axis")
         .call(yAxis);
 
-    // TODO: Use enter-update pattern to draw bars
+    // Use enter-update pattern to draw bars
     chart.selectAll(".bar")
         .data(data)
         .enter()
@@ -66,7 +66,7 @@ d3.csv("data.csv").then(data => {
             tooltip.transition().duration(300).style("opacity", 0);
         });
 
-    // TODO: Add value labels above bars
+    // Add value labels above bars
     chart.selectAll(".label")
         .data(data)
         .enter()
@@ -77,10 +77,10 @@ d3.csv("data.csv").then(data => {
         .attr("text-anchor", "middle")
         .text(d => d.value);
 
-    // TODO: Color bars by category using a color scale
+    // Color bars by category using a color scale
     const barColor = d => colorScale(d.category);
 
-    // TODO: Add a legend showing color-category mapping
+    // Add a legend showing color-category mapping
     const legend = svg.append("g")
         .attr("transform", `translate(${width + margin.left + 10}, ${margin.top})`);
 
@@ -100,7 +100,7 @@ d3.csv("data.csv").then(data => {
             .attr("font-size", "12px");
     });
 
-    // TODO: Add tooltips (optional or extra credit)
+    // Add tooltips viewability
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip");
 });
