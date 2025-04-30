@@ -1,7 +1,6 @@
 # Produce Bar Chart Visualization with D3.js
 
-A simple and interactive data visualization built with **[D3.js](https://d3js.org/)** that reads produce data from a CSV file and displays it as a vertical bar chart.
-The chart shows examples of fruits and vegetables, grouped by category and color-coded for clarity.
+A simple and interactive data visualization built with **[D3.js](https://d3js.org/)**
 
 ---
 
